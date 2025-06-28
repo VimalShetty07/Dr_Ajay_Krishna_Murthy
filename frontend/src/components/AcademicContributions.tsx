@@ -78,7 +78,7 @@ export default function AcademicContributions() {
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Research Highlights</h3>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Dr. Murthy's commitment to advancing the field of oculoplastic surgery through evidence-based practice and continuous learning.
+              Dr. Murthy&apos;s commitment to advancing the field of oculoplastic surgery through evidence-based practice and continuous learning.
             </p>
           </div>
 

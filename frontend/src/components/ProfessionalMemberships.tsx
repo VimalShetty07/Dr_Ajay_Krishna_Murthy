@@ -73,7 +73,7 @@ export default function ProfessionalMemberships() {
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-8 border border-blue-100">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Commitment to Excellence</h3>
             <p className="text-gray-600 text-lg max-w-4xl mx-auto">
-              These professional memberships reflect Dr. Murthy's dedication to staying current with the latest 
+              These professional memberships reflect Dr. Murthy&apos;s dedication to staying current with the latest 
               advancements in oculoplastic surgery and maintaining the highest standards of patient care.
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-4">

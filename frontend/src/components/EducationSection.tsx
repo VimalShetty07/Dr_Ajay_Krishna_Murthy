@@ -25,7 +25,7 @@ export default function EducationSection() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-1">
-                    Master's in Ophthalmology
+                    Master&apos;s in Ophthalmology
                   </h3>
                   <p className="text-emerald-600 font-semibold">MS Ophthalmology</p>
                 </div>

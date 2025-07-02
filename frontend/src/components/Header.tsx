@@ -52,12 +52,6 @@ export default function Header() {
                 Services
               </button>
               <button 
-                onClick={() => scrollToSection('#book')}
-                className="text-gray-600 hover:text-amber-700 text-sm font-medium transition-colors"
-              >
-                Book
-              </button>
-              <button 
                 onClick={() => scrollToSection('#vlogs')}
                 className="text-gray-600 hover:text-amber-700 text-sm font-medium transition-colors"
               >

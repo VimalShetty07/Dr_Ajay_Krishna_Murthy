@@ -6,7 +6,7 @@ export default function ServicesSection() {
       icon: '🔍',
       price: '₹2,500',
       duration: '45-60 mins',
-      color: 'from-blue-500 to-blue-600'
+      color: 'from-amber-500 to-amber-600'
     },
     {
       title: 'Eyelid Surgery Consultation',
@@ -14,7 +14,7 @@ export default function ServicesSection() {
       icon: '👁️',
       price: '₹3,000',
       duration: '30 mins',
-      color: 'from-purple-500 to-purple-600'
+      color: 'from-orange-500 to-orange-600'
     },
     {
       title: 'Orbital Disorder Treatment',
@@ -22,7 +22,7 @@ export default function ServicesSection() {
       icon: '🏥',
       price: '₹4,000',
       duration: '60 mins',
-      color: 'from-green-500 to-green-600'
+      color: 'from-yellow-600 to-amber-600'
     },
     {
       title: 'Cosmetic Enhancement',
@@ -30,7 +30,7 @@ export default function ServicesSection() {
       icon: '✨',
       price: '₹5,000',
       duration: '90 mins',
-      color: 'from-pink-500 to-rose-600'
+      color: 'from-amber-600 to-orange-600'
     },
     {
       title: 'Emergency Eye Care',
@@ -46,7 +46,7 @@ export default function ServicesSection() {
       icon: '📋',
       price: '₹1,500',
       duration: '20 mins',
-      color: 'from-indigo-500 to-indigo-600'
+      color: 'from-amber-500 to-yellow-600'
     }
   ];
 
@@ -54,26 +54,26 @@ export default function ServicesSection() {
     <section className="relative py-16">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50"></div>
-      <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-blue-100/30 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-amber-100/30 to-transparent"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-white rounded-lg px-6 py-3 shadow-md mb-6">
-            <div className="w-8 h-8 bg-blue-700 rounded-lg flex items-center justify-center mr-3">
+            <div className="w-8 h-8 bg-amber-700 rounded-lg flex items-center justify-center mr-3">
               <span className="text-white text-sm font-bold">SV</span>
             </div>
-            <span className="text-blue-700 font-medium">Our Services</span>
+            <span className="text-amber-700 font-medium">Our Services</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Comprehensive
-            <span className="bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent"> Eye Care Services</span>
+            <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent"> Eye Care Services</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             From routine check-ups to complex surgical procedures, we provide complete 
             oculoplastic and ophthalmology services with personalized care.
           </p>
-          <div className="mt-6 w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-500 rounded-full mx-auto"></div>
+          <div className="mt-6 w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full mx-auto"></div>
         </div>
 
         {/* Services Grid */}
@@ -105,13 +105,13 @@ export default function ServicesSection() {
                   <div className="text-sm text-gray-500">
                     <div>Duration: {service.duration}</div>
                   </div>
-                  <div className="text-lg font-bold text-blue-600">
+                  <div className="text-lg font-bold text-amber-600">
                     {service.price}
                   </div>
                 </div>
                 
                 {/* Book Now Button */}
-                <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 group-hover:shadow-md">
+                <button className="w-full bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 group-hover:shadow-md">
                   Book Now
                 </button>
               </div>
@@ -129,10 +129,10 @@ export default function ServicesSection() {
               Need help choosing the right service for your needs?
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-700 hover:bg-blue-800 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-md">
+              <button className="bg-amber-700 hover:bg-amber-800 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-md">
                 Get Free Consultation
               </button>
-              <button className="border-2 border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white font-medium py-3 px-8 rounded-lg transition-all duration-300">
+              <button className="border-2 border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white font-medium py-3 px-8 rounded-lg transition-all duration-300">
                 Call: +91 96115 17424
               </button>
             </div>

@@ -87,26 +87,26 @@ export default function VlogsSection() {
     <section className="relative py-16">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white"></div>
-      <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-blue-100/30 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-amber-100/30 to-transparent"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-white rounded-lg px-6 py-3 shadow-md mb-6">
-            <div className="w-8 h-8 bg-blue-700 rounded-lg flex items-center justify-center mr-3">
-              <span className="text-white text-sm font-bold">🎥</span>
+            <div className="w-8 h-8 bg-amber-700 rounded-lg flex items-center justify-center mr-3">
+              <span className="text-white text-sm font-bold">VL</span>
             </div>
-            <span className="text-blue-700 font-medium">Video Blogs</span>
+            <span className="text-amber-700 font-medium">Video Blogs</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Educational
-            <span className="bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent"> Video Content</span>
+            <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent"> Video Content</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Learn about eye health, surgical procedures, and patient care through 
             our comprehensive video library by Dr. Ajay Krishna Murthy.
           </p>
-          <div className="mt-6 w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-500 rounded-full mx-auto"></div>
+          <div className="mt-6 w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full mx-auto"></div>
         </div>
 
         {/* Featured Video */}
@@ -125,7 +125,7 @@ export default function VlogsSection() {
                     <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white transition-colors duration-300">
-                        <svg className="w-6 h-6 text-blue-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-6 h-6 text-amber-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M8 5v14l11-7z"/>
                         </svg>
                       </div>
@@ -136,7 +136,7 @@ export default function VlogsSection() {
                   </div>
                 </div>
                 <div>
-                  <div className="inline-flex items-center bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                  <div className="inline-flex items-center bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
                     Featured
                   </div>
                   <h4 className="text-2xl font-bold text-gray-900 mb-4">{featuredVlog.title}</h4>
@@ -146,7 +146,7 @@ export default function VlogsSection() {
                     <span>•</span>
                     <span>{new Date(featuredVlog.uploadDate).toLocaleDateString()}</span>
                   </div>
-                  <button className="bg-blue-700 hover:bg-blue-800 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-md">
+                  <button className="bg-amber-700 hover:bg-amber-800 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-md">
                     Watch Now
                   </button>
                 </div>
@@ -163,8 +163,8 @@ export default function VlogsSection() {
               onClick={() => setActiveCategory(category.id)}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                 activeCategory === category.id
-                  ? 'bg-blue-700 text-white shadow-md'
-                  : 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-700 shadow-sm'
+                  ? 'bg-amber-700 text-white shadow-md'
+                  : 'bg-white text-gray-600 hover:bg-amber-50 hover:text-amber-700 shadow-sm'
               }`}
             >
               {category.name}
@@ -190,7 +190,7 @@ export default function VlogsSection() {
                   <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white transition-colors duration-300">
-                      <svg className="w-4 h-4 text-blue-600 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 text-amber-600 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M8 5v14l11-7z"/>
                       </svg>
                     </div>
@@ -205,7 +205,7 @@ export default function VlogsSection() {
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    vlog.category === 'educational' ? 'bg-blue-100 text-blue-700' :
+                    vlog.category === 'educational' ? 'bg-amber-100 text-amber-700' :
                     vlog.category === 'procedures' ? 'bg-purple-100 text-purple-700' :
                     vlog.category === 'testimonials' ? 'bg-green-100 text-green-700' :
                     'bg-orange-100 text-orange-700'
@@ -214,7 +214,7 @@ export default function VlogsSection() {
                   </span>
                 </div>
                 
-                <h4 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-700 transition-colors">
+                <h4 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-amber-700 transition-colors">
                   {vlog.title}
                 </h4>
                 
@@ -241,7 +241,7 @@ export default function VlogsSection() {
               <button className="bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-md">
                 Subscribe on YouTube
               </button>
-              <button className="border-2 border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white font-medium py-3 px-8 rounded-lg transition-all duration-300">
+              <button className="border-2 border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white font-medium py-3 px-8 rounded-lg transition-all duration-300">
                 View All Videos
               </button>
             </div>

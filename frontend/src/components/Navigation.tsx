@@ -34,7 +34,7 @@ export default function Navigation() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-white/95 backdrop-blur-lg shadow-lg border-b border-blue-200/50' 
+        ? 'bg-white/95 backdrop-blur-lg shadow-lg border-b border-amber-200/50' 
         : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4">
@@ -42,7 +42,7 @@ export default function Navigation() {
           
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-10 h-10 bg-blue-700 rounded-lg flex items-center justify-center mr-3">
+            <div className="w-10 h-10 bg-amber-700 rounded-lg flex items-center justify-center mr-3">
               <span className="text-white text-sm font-bold">DM</span>
             </div>
             <div className="text-lg font-bold text-gray-900">
@@ -58,8 +58,8 @@ export default function Navigation() {
                 onClick={() => scrollToSection(item.href)}
                 className={`text-sm font-medium transition-colors duration-200 ${
                   isScrolled 
-                    ? 'text-gray-700 hover:text-blue-600' 
-                    : 'text-white hover:text-blue-200'
+                    ? 'text-gray-700 hover:text-amber-600' 
+                    : 'text-white hover:text-amber-200'
                 }`}
               >
                 {item.name}
@@ -69,7 +69,7 @@ export default function Navigation() {
             {/* CTA Button */}
             <a
               href="tel:+919611517424"
-              className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:shadow-md"
+              className="bg-amber-700 hover:bg-amber-800 text-white px-6 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:shadow-md"
             >
               Call Now
             </a>
@@ -104,14 +104,14 @@ export default function Navigation() {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors"
+                  className="block w-full text-left text-gray-700 hover:text-amber-600 font-medium py-2 transition-colors"
                 >
                   {item.name}
                 </button>
               ))}
               <a
                 href="tel:+919611517424"
-                className="block w-full bg-blue-700 text-white text-center py-3 rounded-md font-medium mt-4"
+                className="block w-full bg-amber-700 text-white text-center py-3 rounded-md font-medium mt-4"
               >
                 Call Now
               </a>

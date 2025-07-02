@@ -25,7 +25,7 @@ export default function Header() {
               <h1 className="text-xl font-semibold text-gray-900">
                 Dr. Ajay Krishna Murthy
               </h1>
-              <p className="text-sm text-blue-700">Oculoplasty Surgeon</p>
+              <p className="text-sm text-amber-700">Oculoplasty Surgeon</p>
             </div>
           </div>
 
@@ -35,31 +35,31 @@ export default function Header() {
             <nav className="hidden md:flex items-center space-x-6">
               <button 
                 onClick={() => scrollToSection('#about')}
-                className="text-gray-600 hover:text-blue-700 text-sm font-medium transition-colors"
+                className="text-gray-600 hover:text-amber-700 text-sm font-medium transition-colors"
               >
                 About
               </button>
               <button 
                 onClick={() => scrollToSection('#specializations')}
-                className="text-gray-600 hover:text-blue-700 text-sm font-medium transition-colors"
+                className="text-gray-600 hover:text-amber-700 text-sm font-medium transition-colors"
               >
                 Specialization
               </button>
               <button 
                 onClick={() => scrollToSection('#services')}
-                className="text-gray-600 hover:text-blue-700 text-sm font-medium transition-colors"
+                className="text-gray-600 hover:text-amber-700 text-sm font-medium transition-colors"
               >
                 Services
               </button>
               <button 
                 onClick={() => scrollToSection('#book')}
-                className="text-gray-600 hover:text-blue-700 text-sm font-medium transition-colors"
+                className="text-gray-600 hover:text-amber-700 text-sm font-medium transition-colors"
               >
                 Book
               </button>
               <button 
                 onClick={() => scrollToSection('#vlogs')}
-                className="text-gray-600 hover:text-blue-700 text-sm font-medium transition-colors"
+                className="text-gray-600 hover:text-amber-700 text-sm font-medium transition-colors"
               >
                 Vlogs
               </button>
@@ -68,7 +68,7 @@ export default function Header() {
             {/* Call to Action Button */}
             <a 
               href="tel:+919611517424"
-              className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
+              className="bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
             >
               Call Now
             </a>

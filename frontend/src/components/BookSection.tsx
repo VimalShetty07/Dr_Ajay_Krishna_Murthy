@@ -45,27 +45,27 @@ export default function BookSection() {
   return (
     <section className="relative py-16">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-white"></div>
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-100/30 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-amber-50 to-white"></div>
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-amber-100/30 to-transparent"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-white rounded-lg px-6 py-3 shadow-md mb-6">
-            <div className="w-8 h-8 bg-blue-700 rounded-lg flex items-center justify-center mr-3">
-              <span className="text-white text-sm font-bold">📅</span>
+            <div className="w-8 h-8 bg-amber-700 rounded-lg flex items-center justify-center mr-3">
+              <span className="text-white text-sm font-bold">AP</span>
             </div>
-            <span className="text-blue-700 font-medium">Book Appointment</span>
+            <span className="text-amber-700 font-medium">Book Appointment</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Schedule Your
-            <span className="bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent"> Consultation</span>
+            <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent"> Consultation</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Book your appointment with Dr. Ajay Krishna Murthy for expert 
             oculoplastic care and personalized treatment.
           </p>
-          <div className="mt-6 w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-500 rounded-full mx-auto"></div>
+          <div className="mt-6 w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full mx-auto"></div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -84,7 +84,7 @@ export default function BookSection() {
                     required
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -100,7 +100,7 @@ export default function BookSection() {
                     required
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
                     placeholder="+91 98765 43210"
                   />
                 </div>
@@ -116,7 +116,7 @@ export default function BookSection() {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -131,7 +131,7 @@ export default function BookSection() {
                   required
                   value={formData.service}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
                 >
                   <option value="">Choose a service</option>
                   {services.map((service, index) => (
@@ -153,7 +153,7 @@ export default function BookSection() {
                     value={formData.date}
                     onChange={handleInputChange}
                     min={new Date().toISOString().split('T')[0]}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
                   />
                 </div>
                 
@@ -167,7 +167,7 @@ export default function BookSection() {
                     required
                     value={formData.time}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
                   >
                     <option value="">Select time</option>
                     {timeSlots.map((time, index) => (
@@ -187,14 +187,14 @@ export default function BookSection() {
                   rows={4}
                   value={formData.message}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
                   placeholder="Any specific concerns or questions..."
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium py-4 px-6 rounded-lg transition-all duration-300 hover:shadow-lg"
+                className="w-full bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-medium py-4 px-6 rounded-lg transition-all duration-300 hover:shadow-lg"
               >
                 Book Appointment
               </button>
@@ -208,8 +208,8 @@ export default function BookSection() {
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-blue-600">📞</span>
+                  <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-amber-600">📞</span>
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Phone</h4>
@@ -219,8 +219,8 @@ export default function BookSection() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-blue-600">📧</span>
+                  <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-amber-600">📧</span>
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Email</h4>
@@ -230,8 +230,8 @@ export default function BookSection() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-blue-600">📍</span>
+                  <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-amber-600">📍</span>
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Clinic Address</h4>
@@ -242,7 +242,7 @@ export default function BookSection() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-8 text-white">
+            <div className="bg-gradient-to-r from-amber-600 to-amber-700 rounded-3xl p-8 text-white">
               <h3 className="text-xl font-bold mb-4">Emergency Contact</h3>
               <p className="mb-4">For urgent eye emergencies, call our 24/7 helpline:</p>
               <div className="text-2xl font-bold">+91 98765 43210</div>

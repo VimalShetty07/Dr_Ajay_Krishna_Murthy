@@ -92,12 +92,12 @@ export default function VlogsSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-white rounded-lg px-6 py-3 shadow-md mb-6">
+          {/* <div className="inline-flex items-center bg-white rounded-lg px-6 py-3 shadow-md mb-6">
             <div className="w-8 h-8 bg-amber-700 rounded-lg flex items-center justify-center mr-3">
               <span className="text-white text-sm font-bold">VL</span>
             </div>
             <span className="text-amber-700 font-medium">Video Blogs</span>
-          </div>
+          </div> */}
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Educational
             <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent"> Video Content</span>
@@ -232,7 +232,7 @@ export default function VlogsSection() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
+        {/* <div className="text-center mt-16">
           <div className="bg-white rounded-3xl p-8 shadow-lg inline-block">
             <p className="text-lg text-gray-600 mb-4">
               Subscribe to stay updated with our latest educational content
@@ -246,7 +246,7 @@ export default function VlogsSection() {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

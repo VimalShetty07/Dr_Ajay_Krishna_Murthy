@@ -64,25 +64,25 @@ export default function Footer() {
         </div>
         
         {/* Bottom Section */}
-        <div className="border-t border-gray-700 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-700 pt-">
+          <div className="flex flex-col md:flex-row justify-center items-center">
             <div className="text-center md:text-left mb-4 md:mb-0">
               <p className="text-gray-300 mb-2">
                 © 2024 Dr. Ajay Krishna Murthy. Professional medical website for informational purposes.
               </p>
-              <p className="text-gray-400 text-sm">
+              {/* <p className="text-gray-400 text-sm">
                 For appointments and consultations, please contact through official channels.
-              </p>
+              </p> */}
             </div>
             
             {/* Credentials */}
-            <div className="flex flex-col items-center md:items-end">
+            {/* <div className="flex flex-col items-center md:items-end">
               <div className="flex items-center space-x-4 mb-2">
                 <span className="bg-amber-500/20 text-amber-300 px-3 py-1 rounded-full text-sm">JIPMER Graduate</span>
                 <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">L.V. Prasad Fellow</span>
               </div>
               <p className="text-gray-400 text-sm">Bangalore, Karnataka, India</p>
-            </div>
+            </div> */}
           </div>
         </div>
         

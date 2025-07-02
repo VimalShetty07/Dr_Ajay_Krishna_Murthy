@@ -59,12 +59,12 @@ export default function ServicesSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-white rounded-lg px-6 py-3 shadow-md mb-6">
+          {/* <div className="inline-flex items-center bg-white rounded-lg px-6 py-3 shadow-md mb-6">
             <div className="w-8 h-8 bg-amber-700 rounded-lg flex items-center justify-center mr-3">
               <span className="text-white text-sm font-bold">SV</span>
             </div>
             <span className="text-amber-700 font-medium">Our Services</span>
-          </div>
+          </div> */}
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Comprehensive
             <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent"> Eye Care Services</span>
@@ -102,12 +102,12 @@ export default function ServicesSection() {
                 
                 {/* Service Details */}
                 <div className="flex justify-between items-center mb-4">
-                  <div className="text-sm text-gray-500">
+                  {/* <div className="text-sm text-gray-500">
                     <div>Duration: {service.duration}</div>
-                  </div>
-                  <div className="text-lg font-bold text-amber-600">
+                  </div> */}
+                  {/* <div className="text-lg font-bold text-amber-600">
                     {service.price}
-                  </div>
+                  </div> */}
                 </div>
                 
                 {/* Book Now Button */}

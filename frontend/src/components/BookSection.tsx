@@ -51,12 +51,12 @@ export default function BookSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-white rounded-lg px-6 py-3 shadow-md mb-6">
+          {/* <div className="inline-flex items-center bg-white rounded-lg px-6 py-3 shadow-md mb-6">
             <div className="w-8 h-8 bg-amber-700 rounded-lg flex items-center justify-center mr-3">
               <span className="text-white text-sm font-bold">AP</span>
             </div>
             <span className="text-amber-700 font-medium">Book Appointment</span>
-          </div>
+          </div> */}
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Schedule Your
             <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent"> Consultation</span>
@@ -242,11 +242,11 @@ export default function BookSection() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-amber-600 to-amber-700 rounded-3xl p-8 text-white">
+            {/* <div className="bg-gradient-to-r from-amber-600 to-amber-700 rounded-3xl p-8 text-white">
               <h3 className="text-xl font-bold mb-4">Emergency Contact</h3>
               <p className="mb-4">For urgent eye emergencies, call our 24/7 helpline:</p>
               <div className="text-2xl font-bold">+91 98765 43210</div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

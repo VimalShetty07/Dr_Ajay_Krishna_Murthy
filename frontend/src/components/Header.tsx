@@ -9,7 +9,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white border-b border-gray-200 shadow-sm">
+    <header className="bg-gradient-to-r from-amber-50 via-white to-orange-50 border-b border-amber-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Left side - Logo and Name */}
@@ -65,12 +65,11 @@ export default function Header() {
               </button>
             </nav>
 
-            {/* Call to Action Button */}
             <a 
-              href="tel:+919611517424"
+              onClick={() => scrollToSection('#book')}
               className="bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
             >
-              Call Now
+              Book Now
             </a>
           </div>
         </div>

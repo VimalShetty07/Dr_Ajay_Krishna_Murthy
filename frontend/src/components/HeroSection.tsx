@@ -25,12 +25,12 @@ export default function HeroSection() {
       caption: 'Patient Care',
       alt: 'Dr. Ajay Krishna Murthy - Patient Care'
     },
-    {
-      id: 4,
-      src: '/images/image4.jpg',
-      caption: 'Oculoplasty Expert',
-      alt: 'Dr. Ajay Krishna Murthy - Oculoplasty Expert'
-    }
+    // {
+    //   id: 4,
+    //   src: '/images/image4.jpg',
+    //   caption: 'Oculoplasty Expert',
+    //   alt: 'Dr. Ajay Krishna Murthy - Oculoplasty Expert'
+    // }
   ];
 
   // Auto-slide functionality every 3 seconds
@@ -69,7 +69,7 @@ export default function HeroSection() {
             <div className="lg:col-span-2 text-center">
               <div className="relative inline-block">
                 {/* Sliding Photo Container */}
-                <div className="relative w-80 h-80 mx-auto rounded-xl overflow-hidden shadow-xl border-4 border-amber-100">
+                <div className="relative w-80 h-96 mx-auto rounded-xl overflow-hidden shadow-xl border-4 border-amber-100">
                   {photos.map((photo, index) => (
                     <div
                       key={photo.id}
@@ -126,10 +126,10 @@ export default function HeroSection() {
                   ))}
                 </div>
                 
-                {/* Professional Badge */}
+                {/* Professional Badge
                 <div className="mt-4 inline-flex items-center bg-amber-600 text-white px-6 py-2 rounded-md shadow-md">
                   <span className="text-sm font-medium">Certified Oculoplasty Surgeon</span>
-                </div>
+                </div> */}
               </div>
             </div>
 

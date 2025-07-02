@@ -17,10 +17,10 @@ export default function Navigation() {
 
   const navItems = [
     { name: 'About', href: '#about' },
-    { name: 'Education', href: '#education' },
-    { name: 'Specializations', href: '#specializations' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Specialization', href: '#specializations' },
+    { name: 'Services', href: '#services' },
+    { name: 'Book', href: '#book' },
+    { name: 'Vlogs', href: '#vlogs' }
   ];
 
   const scrollToSection = (href: string) => {

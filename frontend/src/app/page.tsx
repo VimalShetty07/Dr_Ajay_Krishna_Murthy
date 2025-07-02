@@ -2,12 +2,10 @@ import {
   Header,
   Footer,
   HeroSection,
-  EducationSection,
   SpecializationsSection,
-  ProfessionalExperience,
-  ProfessionalMemberships,
-  ContactSection,
-  AcademicContributions
+  ServicesSection,
+  BookSection,
+  VlogsSection
 } from '@/components';
 
 export default function Home() {
@@ -20,22 +18,20 @@ export default function Home() {
           <HeroSection />
         </section>
         
-        <section id="education">
-          <EducationSection />
-        </section>
-        
         <section id="specializations">
           <SpecializationsSection />
         </section>
         
-        <section id="experience">
-          <ProfessionalExperience />
-          <ProfessionalMemberships />
-          <AcademicContributions />
+        <section id="services">
+          <ServicesSection />
         </section>
         
-        <section id="contact">
-          <ContactSection />
+        <section id="book">
+          <BookSection />
+        </section>
+        
+        <section id="vlogs">
+          <VlogsSection />
         </section>
       </main>
 

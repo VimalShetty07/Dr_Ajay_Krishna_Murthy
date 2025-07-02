@@ -7,4 +7,7 @@ export { default as SpecializationsSection } from './SpecializationsSection';
 export { default as ProfessionalExperience } from './ProfessionalExperience';
 export { default as ProfessionalMemberships } from './ProfessionalMemberships';
 export { default as ContactSection } from './ContactSection';
-export { default as AcademicContributions } from './AcademicContributions'; 
+export { default as AcademicContributions } from './AcademicContributions';
+export { default as ServicesSection } from './ServicesSection';
+export { default as BookSection } from './BookSection';
+export { default as VlogsSection } from './VlogsSection'; 

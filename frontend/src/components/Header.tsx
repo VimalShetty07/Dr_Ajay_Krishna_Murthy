@@ -40,28 +40,28 @@ export default function Header() {
                 About
               </button>
               <button 
-                onClick={() => scrollToSection('#education')}
+                onClick={() => scrollToSection('#specializations')}
                 className="text-gray-600 hover:text-blue-700 text-sm font-medium transition-colors"
               >
-                Education
+                Specialization
               </button>
               <button 
-                onClick={() => scrollToSection('#specializations')}
+                onClick={() => scrollToSection('#services')}
                 className="text-gray-600 hover:text-blue-700 text-sm font-medium transition-colors"
               >
                 Services
               </button>
               <button 
-                onClick={() => scrollToSection('#experience')}
+                onClick={() => scrollToSection('#book')}
                 className="text-gray-600 hover:text-blue-700 text-sm font-medium transition-colors"
               >
-                Experience
+                Book
               </button>
               <button 
-                onClick={() => scrollToSection('#contact')}
+                onClick={() => scrollToSection('#vlogs')}
                 className="text-gray-600 hover:text-blue-700 text-sm font-medium transition-colors"
               >
-                Contact
+                Vlogs
               </button>
             </nav>
 

@@ -4,7 +4,6 @@ import {
   HeroSection,
   EducationSection,
   SpecializationsSection,
-  ServicesSection,
   BookSection,
   VlogsSection
 } from '@/components';

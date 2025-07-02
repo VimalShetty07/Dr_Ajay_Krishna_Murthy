@@ -10,7 +10,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-stone-100 to-orange-50" style={{backgroundColor: '#F5F0E8'}}>
       <Header />
       
       <main>

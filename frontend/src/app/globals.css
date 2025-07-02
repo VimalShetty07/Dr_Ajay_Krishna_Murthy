@@ -2,12 +2,14 @@
 @import "tailwindcss";
 
 :root {
-  --primary-beige: #B68C58;
-  --light-beige: #D4B894;
-  --lighter-beige: #E8D5B7;
-  --lightest-beige: #F4EDE4;
-  --dark-beige: #9A7849;
-  --darker-beige: #7D6139;
+  --primary-text: #B68C58;
+  --secondary-text: #8A7D71;
+  --warm-beige-bg: #F5F0E8;
+  --warm-beige-light: #F9F6F1;
+  --warm-beige-medium: #F1EBE3;
+  --warm-beige-dark: #EDE5DC;
+  --accent-beige: #D4C4B0;
+  --dark-accent: #9B8B7A;
 }
 
 body {
@@ -16,6 +18,7 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  background-color: var(--warm-beige-light);
 }
 
 /* Custom animations and effects */
@@ -66,16 +69,16 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--warm-beige-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, var(--primary-beige), var(--dark-beige));
+  background: linear-gradient(to bottom, var(--primary-text), var(--secondary-text));
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, var(--dark-beige), var(--darker-beige));
+  background: linear-gradient(to bottom, var(--secondary-text), var(--dark-accent));
 }
 
 /* Glass effect */
@@ -98,7 +101,7 @@ html {
 
 /* Text gradient animation */
 .text-gradient-animate {
-  background: linear-gradient(-45deg, var(--primary-beige), var(--dark-beige), var(--light-beige), var(--darker-beige));
+  background: linear-gradient(-45deg, var(--primary-text), var(--secondary-text), var(--accent-beige), var(--dark-accent));
   background-size: 400% 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -1,3 +1,5 @@
+'use client';
+
 export default function ServicesSection() {
   const services = [
     {
@@ -6,7 +8,7 @@ export default function ServicesSection() {
       icon: '🔍',
       price: '₹2,500',
       duration: '45-60 mins',
-      color: 'from-amber-500 to-amber-600'
+      color: '#B68C58'
     },
     {
       title: 'Eyelid Surgery Consultation',
@@ -14,7 +16,7 @@ export default function ServicesSection() {
       icon: '👁️',
       price: '₹3,000',
       duration: '30 mins',
-      color: 'from-orange-500 to-orange-600'
+      color: '#8A7D71'
     },
     {
       title: 'Orbital Disorder Treatment',
@@ -22,7 +24,7 @@ export default function ServicesSection() {
       icon: '🏥',
       price: '₹4,000',
       duration: '60 mins',
-      color: 'from-yellow-600 to-amber-600'
+      color: '#9B8B7A'
     },
     {
       title: 'Cosmetic Enhancement',
@@ -30,7 +32,7 @@ export default function ServicesSection() {
       icon: '✨',
       price: '₹5,000',
       duration: '90 mins',
-      color: 'from-amber-600 to-orange-600'
+      color: '#B68C58'
     },
     {
       title: 'Emergency Eye Care',
@@ -38,7 +40,7 @@ export default function ServicesSection() {
       icon: '🚨',
       price: '₹3,500',
       duration: 'Immediate',
-      color: 'from-red-500 to-red-600'
+      color: '#8A7D71'
     },
     {
       title: 'Follow-up Consultation',
@@ -46,34 +48,34 @@ export default function ServicesSection() {
       icon: '📋',
       price: '₹1,500',
       duration: '20 mins',
-      color: 'from-amber-500 to-yellow-600'
+      color: '#D4C4B0'
     }
   ];
 
   return (
-    <section className="relative py-16">
+    <section className="relative py-16" style={{backgroundColor: '#F5F0E8'}}>
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50"></div>
-      <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-amber-100/30 to-transparent"></div>
+      <div className="absolute inset-0" style={{background: 'linear-gradient(to bottom right, #F9F6F1, #F1EBE3)'}}></div>
+      <div className="absolute top-0 left-0 w-1/3 h-full" style={{background: 'linear-gradient(to right, rgba(212, 196, 176, 0.3), transparent)'}}></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-white rounded-lg px-6 py-3 shadow-md mb-6">
-            <div className="w-8 h-8 bg-amber-700 rounded-lg flex items-center justify-center mr-3">
+          {/* <div className="inline-flex items-center bg-white rounded-lg px-6 py-3 shadow-md mb-6">
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center mr-3" style={{backgroundColor: '#B68C58'}}>
               <span className="text-white text-sm font-bold">SV</span>
             </div>
-            <span className="text-amber-700 font-medium">Our Services</span>
-          </div>
+            <span className="font-medium" style={{color: '#8A7D71'}}>Our Services</span>
+          </div> */}
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Comprehensive
-            <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent"> Eye Care Services</span>
+            <span className="bg-gradient-to-r bg-clip-text text-transparent ml-3" style={{backgroundImage: 'linear-gradient(to right, #B68C58, #8A7D71)'}}> Eye Care Services</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             From routine check-ups to complex surgical procedures, we provide complete 
             oculoplastic and ophthalmology services with personalized care.
           </p>
-          <div className="mt-6 w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full mx-auto"></div>
+          <div className="mt-6 w-24 h-1 rounded-full mx-auto" style={{background: 'linear-gradient(to right, #B68C58, #8A7D71)'}}></div>
         </div>
 
         {/* Services Grid */}
@@ -84,10 +86,10 @@ export default function ServicesSection() {
               className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 overflow-hidden"
             >
               {/* Background gradient on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-500" style={{backgroundColor: service.color}}></div>
               
               {/* Icon */}
-              <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl mb-6 transform group-hover:scale-110 transition-transform duration-300`}>
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6 transform group-hover:scale-110 transition-transform duration-300" style={{backgroundColor: service.color}}>
                 <span className="text-2xl text-white">{service.icon}</span>
               </div>
               
@@ -105,13 +107,13 @@ export default function ServicesSection() {
                   <div className="text-sm text-gray-500">
                     <div>Duration: {service.duration}</div>
                   </div>
-                  <div className="text-lg font-bold text-amber-600">
+                  {/* <div className="text-lg font-bold" style={{color: service.color}}>
                     {service.price}
-                  </div>
+                  </div> */}
                 </div>
                 
                 {/* Book Now Button */}
-                <button className="w-full bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 group-hover:shadow-md">
+                <button className="w-full text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 group-hover:shadow-md" style={{backgroundColor: service.color}}>
                   Book Now
                 </button>
               </div>
@@ -129,10 +131,10 @@ export default function ServicesSection() {
               Need help choosing the right service for your needs?
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-amber-700 hover:bg-amber-800 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-md">
+              {/* <button className="text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-md" style={{backgroundColor: '#B68C58'}}>
                 Get Free Consultation
-              </button>
-              <button className="border-2 border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white font-medium py-3 px-8 rounded-lg transition-all duration-300">
+              </button> */}
+              <button className="border-2 font-medium py-3 px-8 rounded-lg transition-all duration-300" style={{borderColor: '#B68C58', color: '#B68C58'}} onMouseOver={(e) => {e.currentTarget.style.backgroundColor = '#B68C58'; e.currentTarget.style.color = 'white'}} onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#B68C58'}}>
                 Call: +91 96115 17424
               </button>
             </div>

@@ -55,21 +55,21 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative py-16">
+    <section className="relative py-16" style={{backgroundColor: '#F5F0E8'}}>
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-white to-orange-50"></div>
-      <div className="absolute top-10 right-10 w-72 h-72 bg-gradient-to-br from-amber-200/20 to-orange-200/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 left-10 w-96 h-96 bg-gradient-to-br from-amber-200/20 to-yellow-200/20 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0" style={{background: 'linear-gradient(to bottom right, #F9F6F1, #F1EBE3)'}}></div>
+      <div className="absolute top-10 right-10 w-72 h-72 rounded-full blur-3xl" style={{background: 'linear-gradient(to bottom right, rgba(212, 196, 176, 0.3), rgba(182, 140, 88, 0.2))'}}></div>
+      <div className="absolute bottom-10 left-10 w-96 h-96 rounded-full blur-3xl" style={{background: 'linear-gradient(to bottom right, rgba(212, 196, 176, 0.2), rgba(155, 139, 122, 0.2))'}}></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4">
-        <div className="bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl p-12 border border-white/50">
+        <div className="bg-white/90 backdrop-blur-lg rounded-3xl shadow-2xl p-12 border border-white/50">
           <div className="grid lg:grid-cols-5 gap-12 items-center">
             
             {/* Sliding Photo Section */}
             <div className="lg:col-span-2 text-center">
               <div className="relative inline-block">
                 {/* Sliding Photo Container */}
-                <div className="relative w-80 h-80 mx-auto rounded-xl overflow-hidden shadow-xl border-4 border-amber-100">
+                <div className="relative w-80 h-96 mx-auto rounded-xl overflow-hidden shadow-xl border-4" style={{borderColor: '#D4C4B0'}}>
                   {photos.map((photo, index) => (
                     <div
                       key={photo.id}
@@ -117,18 +117,10 @@ export default function HeroSection() {
                     <button
                       key={index}
                       onClick={() => goToSlide(index)}
-                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                        index === currentSlide
-                          ? 'bg-amber-600'
-                          : 'bg-gray-300 hover:bg-gray-400'
-                      }`}
+                      className="w-2 h-2 rounded-full transition-all duration-300"
+                      style={{backgroundColor: index === currentSlide ? '#B68C58' : '#D4C4B0'}}
                     />
                   ))}
-                </div>
-                
-                {/* Professional Badge */}
-                <div className="mt-4 inline-flex items-center bg-amber-600 text-white px-6 py-2 rounded-md shadow-md">
-                  <span className="text-sm font-medium">Certified Oculoplasty Surgeon</span>
                 </div>
               </div>
             </div>
@@ -140,29 +132,29 @@ export default function HeroSection() {
                 <div>
                   <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
                     Meet Your
-                    <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent"> Expert Eye Surgeon</span>
+                    <span className="bg-gradient-to-r bg-clip-text text-transparent" style={{backgroundImage: 'linear-gradient(to right, #B68C58, #8A7D71)'}}> Expert Eye Surgeon</span>
                   </h2>
-                  <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full"></div>
+                  <div className="w-24 h-1 rounded-full" style={{background: 'linear-gradient(to right, #B68C58, #8A7D71)'}}></div>
                 </div>
 
                 {/* Description */}
                 <div className="space-y-6">
                   <p className="text-xl text-gray-700 leading-relaxed font-light">
-                    Dr. Ajay Krishna Murthy is a <strong className="text-amber-700">distinguished Oculoplasty consultant</strong> based in Bangalore, 
+                    Dr. Ajay Krishna Murthy is a <strong style={{color: '#B68C58'}}>distinguished Oculoplasty consultant</strong> based in Bangalore, 
                     recognized for his academic excellence and extensive expertise in Ophthalmology.
                   </p>
                   
                   <p className="text-lg text-gray-600 leading-relaxed">
                     With advanced training from prestigious institutions and a commitment to precision and innovation, 
-                    Dr. Murthy specializes in both <em className="text-amber-600">fundamental and advanced lid, orbit, and aesthetic oculoplastic surgeries</em>.
+                    Dr. Murthy specializes in both <em style={{color: '#8A7D71'}}>fundamental and advanced lid, orbit, and aesthetic oculoplastic surgeries</em>.
                   </p>
                 </div>
 
                 {/* Professional Credentials */}
                 <div className="grid md:grid-cols-3 gap-4">
-                  <div className="bg-white p-6 rounded-lg border border-amber-200 hover:shadow-md transition-all duration-300">
+                  <div className="bg-white p-6 rounded-lg border hover:shadow-md transition-all duration-300" style={{borderColor: '#D4C4B0'}}>
                     <div className="text-center">
-                      <div className="w-12 h-12 bg-amber-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                      <div className="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-3" style={{backgroundColor: '#B68C58'}}>
                         <span className="text-white text-sm font-bold">MS</span>
                       </div>
                       <h3 className="font-semibold text-gray-900 mb-1">JIPMER Graduate</h3>
@@ -170,9 +162,9 @@ export default function HeroSection() {
                     </div>
                   </div>
 
-                  <div className="bg-white p-6 rounded-lg border border-amber-200 hover:shadow-md transition-all duration-300">
+                  <div className="bg-white p-6 rounded-lg border hover:shadow-md transition-all duration-300" style={{borderColor: '#D4C4B0'}}>
                     <div className="text-center">
-                      <div className="w-12 h-12 bg-amber-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                      <div className="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-3" style={{backgroundColor: '#8A7D71'}}>
                         <span className="text-white text-sm font-bold">LV</span>
                       </div>
                       <h3 className="font-semibold text-gray-900 mb-1">L.V. Prasad Fellow</h3>
@@ -180,9 +172,9 @@ export default function HeroSection() {
                     </div>
                   </div>
 
-                  <div className="bg-white p-6 rounded-lg border border-amber-200 hover:shadow-md transition-all duration-300">
+                  <div className="bg-white p-6 rounded-lg border hover:shadow-md transition-all duration-300" style={{borderColor: '#D4C4B0'}}>
                     <div className="text-center">
-                      <div className="w-12 h-12 bg-amber-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                      <div className="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-3" style={{backgroundColor: '#B68C58'}}>
                         <span className="text-white text-sm font-bold">MD</span>
                       </div>
                       <h3 className="font-semibold text-gray-900 mb-1">Specialist Surgeon</h3>
@@ -193,7 +185,7 @@ export default function HeroSection() {
 
                 {/* CTA Button */}
                 <div className="pt-4">
-                  <button className="bg-amber-700 hover:bg-amber-800 text-white font-medium py-4 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                  <button className="text-white font-medium py-4 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300" style={{backgroundColor: '#B68C58'}} onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#8A7D71'} onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#B68C58'}>
                     Book Consultation
                   </button>
                 </div>

@@ -16,11 +16,12 @@ export default function Navigation() {
   }, []);
 
   const navItems = [
-    { name: 'About', href: '#about' },
-    { name: 'Specialization', href: '#specializations' },
-    { name: 'Services', href: '#services' },
-    { name: 'Book', href: '#book' },
-    { name: 'Vlogs', href: '#vlogs' }
+    { href: '#about', label: 'About' },
+    { href: '#specializations', label: 'Specializations' },
+    { href: '#services', label: 'Services' },
+    { href: '#experience', label: 'Experience' },
+    { href: '#education', label: 'Education' },
+    { href: '#book', label: 'Book Appointment' }
   ];
 
   const scrollToSection = (href: string) => {
@@ -54,22 +55,26 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
-                key={item.name}
+                key={item.href}
                 onClick={() => scrollToSection(item.href)}
                 className={`text-sm font-medium transition-colors duration-200 ${
                   isScrolled 
                     ? 'text-gray-700 hover:text-amber-600' 
                     : 'text-white hover:text-amber-200'
                 }`}
+                style={{color: '#8A7D71'}}
+                onMouseOver={(e) => e.currentTarget.style.color = '#B68C58'}
+                onMouseOut={(e) => e.currentTarget.style.color = '#8A7D71'}
               >
-                {item.name}
+                {item.label}
               </button>
             ))}
             
             {/* CTA Button */}
             <a
               href="tel:+919611517424"
-              className="bg-amber-700 hover:bg-amber-800 text-white px-6 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:shadow-md"
+              className="text-white px-6 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:shadow-md hover:-translate-y-0.5"
+              style={{background: 'linear-gradient(45deg, #B68C58, #8A7D71)'}}
             >
               Call Now
             </a>
@@ -102,11 +107,11 @@ export default function Navigation() {
             <div className="space-y-4">
               {navItems.map((item) => (
                 <button
-                  key={item.name}
+                  key={item.href}
                   onClick={() => scrollToSection(item.href)}
                   className="block w-full text-left text-gray-700 hover:text-amber-600 font-medium py-2 transition-colors"
                 >
-                  {item.name}
+                  {item.label}
                 </button>
               ))}
               <a

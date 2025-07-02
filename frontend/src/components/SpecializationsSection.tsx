@@ -1,117 +1,168 @@
 export default function SpecializationsSection() {
   const specializations = [
     {
-      title: 'Eyelid Reconstructive Surgery',
-      description: 'Comprehensive reconstruction of eyelid defects and malformations',
-      icon: '👁️',
-      color: 'from-amber-500 to-amber-600'
+      title: 'Lacrimal Disorders & DCR',
+      description: 'Paediatric lacrimal disorders, endoscopic and external DCR procedures',
+      icon: '💧',
+      techniques: ['Paediatric Lacrimal Surgery', 'Endoscopic DCR', 'External DCR'],
+      color: '#B68C58'
     },
     {
-      title: 'Orbital Surgery',
-      description: 'Advanced surgical procedures for orbital tumors and fractures',
-      icon: '🔬',
-      color: 'from-orange-500 to-orange-600'
-    },
-    {
-      title: 'Aesthetic Oculoplastic Procedures',
-      description: 'Cosmetic enhancement of the eye area and facial rejuvenation',
+      title: 'Eyelid Cosmetic Surgery',
+      description: 'Advanced cosmetic and reconstructive eyelid procedures for aesthetic enhancement',
       icon: '✨',
-      color: 'from-yellow-600 to-amber-600'
+      techniques: ['Blepharoplasty', 'Ptosis Correction', 'Eyelid Rejuvenation'],
+      color: '#8A7D71'
     },
     {
-      title: 'Lid Surgery (Blepharoplasty)',
-      description: 'Surgical correction of droopy eyelids and excess skin',
-      icon: '⚕️',
-      color: 'from-amber-500 to-amber-600'
+      title: 'Orbital Tumors & Decompression',
+      description: 'Minimal invasive approach to orbital tumors and orbital decompression procedures',
+      icon: '🔬',
+      techniques: ['Minimally Invasive Surgery', 'Orbital Tumor Removal', 'Orbital Decompression'],
+      color: '#9B8B7A'
     },
     {
-      title: 'Fundamental Oculoplastic Procedures',
-      description: 'Essential treatments for common eyelid and tear duct conditions',
+      title: 'Reconstructive Surgery',
+      description: 'Eyelid and socket reconstruction, cancer removal and repair procedures',
+      icon: '🔧',
+      techniques: ['Eyelid Reconstruction', 'Socket Reconstruction', 'Cancer Reconstruction'],
+      color: '#B68C58'
+    },
+    {
+      title: 'Orbital Fracture Repair',
+      description: 'Expert repair of orbital fractures with advanced surgical techniques',
       icon: '🏥',
-      color: 'from-amber-600 to-orange-600'
+      techniques: ['Orbital Floor Repair', 'Medial Wall Repair', 'Complex Fracture Surgery'],
+      color: '#8A7D71'
     },
     {
-      title: 'Advanced Oculoplastic Surgery',
-      description: 'Complex surgical interventions requiring specialized expertise',
-      icon: '🎯',
-      color: 'from-orange-500 to-red-600'
+      title: 'Botox Treatments',
+      description: 'Botox for Blepharospasm, Hemifacial spasm and age-related changes',
+      icon: '💉',
+      techniques: ['Blepharospasm Treatment', 'Hemifacial Spasm', 'Anti-aging Botox'],
+      color: '#9B8B7A'
     }
   ];
 
   return (
-    <section className="relative py-16">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-amber-50"></div>
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-amber-100/30 to-transparent"></div>
+    <section id="specializations" className="relative py-20" style={{backgroundColor: '#F5F0E8'}}>
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full" style={{background: 'linear-gradient(135deg, #F9F6F1, #F1EBE3, #EDE5DC)'}}></div>
+        <div className="absolute top-20 right-10 w-64 h-64 rounded-full opacity-10" style={{backgroundColor: '#B68C58'}}></div>
+        <div className="absolute bottom-20 left-10 w-48 h-48 rounded-full opacity-10" style={{backgroundColor: '#8A7D71'}}></div>
+      </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4">
-        {/* Header */}
+        {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-white rounded-lg px-6 py-3 shadow-md mb-6">
-            <div className="w-8 h-8 bg-amber-700 rounded-lg flex items-center justify-center mr-3">
+          {/* <div className="inline-flex items-center bg-white rounded-lg px-6 py-3 shadow-md mb-6">
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center mr-3" style={{backgroundColor: '#B68C58'}}>
               <span className="text-white text-sm font-bold">SP</span>
             </div>
-            <span className="text-amber-700 font-medium">Specializations</span>
-          </div>
+            <span className="font-medium" style={{color: '#8A7D71'}}>Specializations</span>
+          </div> */}
+          
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Areas of
-            <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent"> Expertise</span>
+            Advanced
+            <span className="bg-gradient-to-r bg-clip-text text-transparent ml-3" style={{backgroundImage: 'linear-gradient(to right, #B68C58, #8A7D71)'}}>
+              Oculoplastic Expertise
+            </span>
           </h2>
+          
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Dr. Ajay Krishna Murthy offers comprehensive oculoplastic surgery services 
-            with precision, innovation, and personalized care.
+            Specialized training from premier institutions ensures comprehensive care 
+            across all aspects of oculoplastic and orbital surgery.
           </p>
-          <div className="mt-6 w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full mx-auto"></div>
+          
+          <div className="mt-6 w-24 h-1 rounded-full mx-auto" style={{background: 'linear-gradient(to right, #B68C58, #8A7D71)'}}></div>
         </div>
 
         {/* Specializations Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {specializations.map((specialization, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {specializations.map((spec, index) => (
             <div
               key={index}
-              className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 overflow-hidden"
+              className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 overflow-hidden"
             >
-              {/* Background gradient on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${specialization.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
+              {/* Background gradient */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-500" style={{backgroundColor: spec.color}}></div>
               
               {/* Icon */}
-              <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${specialization.color} rounded-2xl mb-6 transform group-hover:scale-110 transition-transform duration-300`}>
-                <span className="text-2xl text-white">{specialization.icon}</span>
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center justify-center w-16 h-16 rounded-2xl transform group-hover:scale-110 transition-transform duration-300" style={{backgroundColor: spec.color}}>
+                  <span className="text-2xl text-white">{spec.icon}</span>
+                </div>
+                <div className="text-right">
+                  <div className="w-8 h-8 rounded-lg opacity-20 group-hover:opacity-30 transition-opacity" style={{backgroundColor: spec.color}}></div>
+                </div>
               </div>
               
               {/* Content */}
               <div className="relative z-10">
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-800">
-                  {specialization.title}
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-gray-800">
+                  {spec.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  {specialization.description}
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  {spec.description}
                 </p>
                 
-                {/* Learn More Link */}
-                <div className="flex items-center text-sm font-semibold text-amber-600 group-hover:text-amber-700 transition-colors">
-                  <span>Learn More</span>
-                  <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                {/* Techniques */}
+                <div className="space-y-3">
+                  <h4 className="text-sm font-semibold text-gray-700 uppercase tracking-wide">
+                    Key Procedures:
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {spec.techniques.map((technique, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="text-xs font-medium px-3 py-1 rounded-full text-white"
+                        style={{backgroundColor: spec.color}}
+                      >
+                        {technique}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
               
               {/* Decorative element */}
-              <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full opacity-20 group-hover:opacity-30 transition-opacity"></div>
+              <div className="absolute bottom-4 right-4 w-20 h-20 rounded-full opacity-10 group-hover:opacity-20 transition-opacity" style={{backgroundColor: spec.color}}></div>
             </div>
           ))}
         </div>
-        
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-white rounded-3xl p-8 shadow-lg inline-block">
-            <p className="text-lg text-gray-600 mb-4">
-              Need a specialized consultation for your eye condition?
-            </p>
-            <button className="bg-amber-700 hover:bg-amber-800 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-md">
-              Discuss Your Case
-            </button>
+
+        {/* Training & Credentials Section */}
+        <div className="bg-white rounded-3xl p-8 shadow-lg">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Training & Credentials</h3>
+            <div className="w-16 h-1 rounded-full mx-auto" style={{backgroundColor: '#B68C58'}}></div>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{backgroundColor: '#B68C58'}}>
+                <span className="text-2xl text-white">🎓</span>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">JIPMER Graduate</h4>
+              <p className="text-gray-600">Premier medical education from Jawaharlal Institute of Postgraduate Medical Education</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{backgroundColor: '#8A7D71'}}>
+                <span className="text-2xl text-white">🏥</span>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">L.V. Prasad Fellowship</h4>
+              <p className="text-gray-600">Advanced fellowship training in Oculoplasty from L.V. Prasad Eye Institute</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{backgroundColor: '#9B8B7A'}}>
+                <span className="text-2xl text-white">📋</span>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">Board Certified</h4>
+              <p className="text-gray-600">Certified specialist in Ophthalmology and Oculoplastic Surgery</p>
+            </div>
           </div>
         </div>
       </div>

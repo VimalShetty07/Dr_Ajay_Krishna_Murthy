@@ -1,251 +1,215 @@
 'use client';
 
-import { useState } from 'react';
-
 export default function VlogsSection() {
-  const [activeCategory, setActiveCategory] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'All Videos' },
-    { id: 'educational', name: 'Educational' },
-    { id: 'procedures', name: 'Procedures' },
-    { id: 'testimonials', name: 'Patient Stories' },
-    { id: 'tips', name: 'Eye Care Tips' }
+    { name: "All", count: 6, color: '#B68C58' },
+    { name: "Educational", count: 2, color: '#8A7D71' },
+    { name: "Procedure", count: 1, color: '#9B8B7A' },
+    { name: "Care Tips", count: 1, color: '#B68C58' }
   ];
 
   const vlogs = [
     {
-      id: 1,
-      title: 'Understanding Eyelid Surgery: Complete Guide',
-      description: 'Comprehensive overview of blepharoplasty procedures, benefits, and recovery process.',
-      thumbnail: '/images/Operationtheatre.JPG',
-      duration: '12:34',
-      category: 'educational',
-      views: '15.2K',
-      uploadDate: '2024-01-15',
-      featured: true
+      title: "Understanding Oculoplastic Surgery",
+      description: "Comprehensive overview of what oculoplastic surgery involves and when it's needed",
+      duration: "8:45",
+      views: "12.5K",
+      category: "Educational",
+      thumbnail: "🎥",
+      color: '#B68C58'
     },
     {
-      id: 2,
-      title: 'Post-Surgery Care Instructions',
-      description: 'Essential guidelines for optimal recovery after oculoplastic surgery.',
-      thumbnail: '/images/image1.jpg',
-      duration: '8:45',
-      category: 'educational',
-      views: '8.7K',
-      uploadDate: '2024-01-10'
+      title: "Eyelid Surgery: Before & After",
+      description: "Patient journey through blepharoplasty procedure with detailed explanation",
+      duration: "6:32",
+      views: "8.9K", 
+      category: "Procedure",
+      thumbnail: "👁️",
+      color: '#8A7D71'
     },
     {
-      id: 3,
-      title: 'Patient Success Story: Maria\'s Journey',
-      description: 'Real patient testimonial about her transformative eyelid reconstruction experience.',
-      thumbnail: '/images/image2.jpg',
-      duration: '6:23',
-      category: 'testimonials',
-      views: '12.1K',
-      uploadDate: '2024-01-08'
+      title: "Post-Surgery Care Tips",
+      description: "Essential guidelines for recovery and achieving the best surgical outcomes",
+      duration: "5:18",
+      views: "15.2K",
+      category: "Care Tips",
+      thumbnail: "🏥",
+      color: '#9B8B7A'
     },
     {
-      id: 4,
-      title: 'Daily Eye Care Routine for Healthy Eyes',
-      description: 'Simple but effective daily practices to maintain optimal eye health.',
-      thumbnail: '/images/image3.jpg',
-      duration: '9:12',
-      category: 'tips',
-      views: '20.5K',
-      uploadDate: '2024-01-05'
+      title: "When to See an Oculoplastic Surgeon",
+      description: "Signs and symptoms that indicate you should consult an oculoplastic specialist",
+      duration: "7:22",
+      views: "9.8K",
+      category: "Consultation",
+      thumbnail: "👨‍⚕️",
+      color: '#B68C58'
     },
     {
-      id: 5,
-      title: 'Orbital Surgery: Advanced Techniques',
-      description: 'Detailed explanation of modern orbital surgery methods and innovations.',
-      thumbnail: '/images/image4.jpg',
-      duration: '15:18',
-      category: 'procedures',
-      views: '6.8K',
-      uploadDate: '2024-01-02'
+      title: "Myths vs Facts: Eye Surgery",
+      description: "Debunking common misconceptions about oculoplastic procedures",
+      duration: "9:15",
+      views: "18.7K",
+      category: "Educational",
+      thumbnail: "💡",
+      color: '#8A7D71'
     },
     {
-      id: 6,
-      title: 'When to See an Oculoplastic Surgeon',
-      description: 'Key signs and symptoms that indicate you should consult a specialist.',
-      thumbnail: '/images/logo.jpeg',
-      duration: '7:56',
-      category: 'educational',
-      views: '11.3K',
-      uploadDate: '2023-12-28'
+      title: "Latest Advances in Orbital Surgery",
+      description: "Cutting-edge techniques and technologies in modern orbital surgery",
+      duration: "11:03",
+      views: "6.4K",
+      category: "Advanced",
+      thumbnail: "🔬",
+      color: '#9B8B7A'
     }
   ];
 
-  const filteredVlogs = activeCategory === 'all' 
-    ? vlogs 
-    : vlogs.filter(vlog => vlog.category === activeCategory);
-
-  const featuredVlog = vlogs.find(vlog => vlog.featured);
-
   return (
-    <section className="relative py-16">
+    <section id="vlogs" className="relative py-20" style={{backgroundColor: '#F5F0E8'}}>
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white"></div>
-      <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-amber-100/30 to-transparent"></div>
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full" style={{background: 'linear-gradient(to bottom right, #F9F6F1, #F1EBE3)'}}></div>
+        <div className="absolute top-0 right-0 w-1/3 h-full opacity-30" style={{background: 'linear-gradient(to left, rgba(182, 140, 88, 0.1), transparent)'}}></div>
+      </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-white rounded-lg px-6 py-3 shadow-md mb-6">
-            <div className="w-8 h-8 bg-amber-700 rounded-lg flex items-center justify-center mr-3">
+          {/* <div className="inline-flex items-center bg-white rounded-lg px-6 py-3 shadow-md mb-6">
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center mr-3" style={{backgroundColor: '#B68C58'}}>
               <span className="text-white text-sm font-bold">VL</span>
             </div>
-            <span className="text-amber-700 font-medium">Video Blogs</span>
-          </div>
+            <span className="font-medium" style={{color: '#8A7D71'}}>Educational Content</span>
+          </div> */}
+          
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Educational
-            <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent"> Video Content</span>
+            <span className="bg-gradient-to-r bg-clip-text text-transparent ml-3" style={{backgroundImage: 'linear-gradient(to right, #B68C58, #8A7D71)'}}>
+              Video Library
+            </span>
           </h2>
+          
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Learn about eye health, surgical procedures, and patient care through 
-            our comprehensive video library by Dr. Ajay Krishna Murthy.
+            Learn about oculoplastic surgery, procedures, and eye care through our 
+            comprehensive educational video series by Dr. Ajay Krishna Murthy.
           </p>
-          <div className="mt-6 w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full mx-auto"></div>
+          
+          <div className="mt-6 w-24 h-1 rounded-full mx-auto" style={{background: 'linear-gradient(to right, #B68C58, #8A7D71)'}}></div>
         </div>
-
-        {/* Featured Video */}
-        {featuredVlog && (
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Featured Video</h3>
-            <div className="bg-white rounded-3xl p-8 shadow-2xl border border-gray-100">
-              <div className="grid lg:grid-cols-2 gap-8 items-center">
-                <div className="relative">
-                  <div className="relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
-                    <img
-                      src={featuredVlog.thumbnail}
-                      alt={featuredVlog.title}
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white transition-colors duration-300">
-                        <svg className="w-6 h-6 text-amber-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M8 5v14l11-7z"/>
-                        </svg>
-                      </div>
-                    </div>
-                    <div className="absolute bottom-4 right-4 bg-black/60 text-white px-2 py-1 rounded text-sm">
-                      {featuredVlog.duration}
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div className="inline-flex items-center bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
-                    Featured
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-900 mb-4">{featuredVlog.title}</h4>
-                  <p className="text-gray-600 mb-6">{featuredVlog.description}</p>
-                  <div className="flex items-center space-x-4 text-sm text-gray-500 mb-6">
-                    <span>{featuredVlog.views} views</span>
-                    <span>•</span>
-                    <span>{new Date(featuredVlog.uploadDate).toLocaleDateString()}</span>
-                  </div>
-                  <button className="bg-amber-700 hover:bg-amber-800 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-md">
-                    Watch Now
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
 
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
+          {categories.map((category, index) => (
             <button
-              key={category.id}
-              onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                activeCategory === category.id
-                  ? 'bg-amber-700 text-white shadow-md'
-                  : 'bg-white text-gray-600 hover:bg-amber-50 hover:text-amber-700 shadow-sm'
-              }`}
+              key={index}
+              className="flex items-center px-6 py-3 rounded-full text-white font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              style={{backgroundColor: category.color}}
             >
-              {category.name}
+              <span>{category.name}</span>
+              <span className="ml-2 text-sm bg-white/20 px-2 py-1 rounded-full">
+                {category.count}
+              </span>
             </button>
           ))}
         </div>
 
         {/* Video Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredVlogs.map((vlog) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {vlogs.map((vlog, index) => (
             <div
-              key={vlog.id}
-              className="group bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 overflow-hidden"
+              key={index}
+              className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100"
             >
               {/* Video Thumbnail */}
-              <div className="relative mb-6">
-                <div className="relative rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-shadow duration-300 cursor-pointer">
-                  <img
-                    src={vlog.thumbnail}
-                    alt={vlog.title}
-                    className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white transition-colors duration-300">
-                      <svg className="w-4 h-4 text-amber-600 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z"/>
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="absolute bottom-3 right-3 bg-black/60 text-white px-2 py-1 rounded text-xs">
-                    {vlog.duration}
-                  </div>
+              <div className="relative h-48 flex items-center justify-center" style={{backgroundColor: vlog.color}}>
+                <div className="text-6xl text-white opacity-80">
+                  {vlog.thumbnail}
+                </div>
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <button className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center transform scale-0 group-hover:scale-100 transition-transform duration-300">
+                    <span className="text-2xl ml-1" style={{color: vlog.color}}>▶️</span>
+                  </button>
+                </div>
+                
+                {/* Duration Badge */}
+                <div className="absolute bottom-4 right-4 bg-black/70 text-white text-sm px-3 py-1 rounded-full">
+                  {vlog.duration}
+                </div>
+                
+                {/* Category Badge */}
+                <div className="absolute top-4 left-4 text-white text-xs px-3 py-1 rounded-full" style={{backgroundColor: 'rgba(255, 255, 255, 0.2)'}}>
+                  {vlog.category}
                 </div>
               </div>
-
-              {/* Video Content */}
-              <div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    vlog.category === 'educational' ? 'bg-amber-100 text-amber-700' :
-                    vlog.category === 'procedures' ? 'bg-purple-100 text-purple-700' :
-                    vlog.category === 'testimonials' ? 'bg-green-100 text-green-700' :
-                    'bg-orange-100 text-orange-700'
-                  }`}>
-                    {categories.find(cat => cat.id === vlog.category)?.name}
-                  </span>
-                </div>
-                
-                <h4 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-amber-700 transition-colors">
+              
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors">
                   {vlog.title}
-                </h4>
-                
-                <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">
+                </h3>
+                <p className="text-gray-600 leading-relaxed mb-4 text-sm">
                   {vlog.description}
                 </p>
                 
-                <div className="flex items-center justify-between text-xs text-gray-500">
-                  <span>{vlog.views} views</span>
-                  <span>{new Date(vlog.uploadDate).toLocaleDateString()}</span>
+                {/* Stats */}
+                <div className="flex items-center justify-between text-sm text-gray-500">
+                  <div className="flex items-center">
+                    <span className="text-lg mr-2">👁️</span>
+                    <span>{vlog.views} views</span>
+                  </div>
+                  <button className="text-white px-4 py-2 rounded-lg font-medium transition-colors hover:opacity-90" style={{backgroundColor: vlog.color}}>
+                    Watch Now
+                  </button>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-white rounded-3xl p-8 shadow-lg inline-block">
-            <p className="text-lg text-gray-600 mb-4">
-              Subscribe to stay updated with our latest educational content
+        {/* Video Stats & CTA */}
+        <div className="bg-white rounded-3xl p-8 shadow-lg">
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div>
+              <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{backgroundColor: '#B68C58'}}>
+                <span className="text-white text-2xl">📺</span>
+              </div>
+              <h4 className="text-2xl font-bold text-gray-900 mb-2">50+ Videos</h4>
+              <p className="text-gray-600">Educational content covering all aspects of eye care</p>
+            </div>
+            
+            <div>
+              <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{backgroundColor: '#8A7D71'}}>
+                <span className="text-white text-2xl">👥</span>
+              </div>
+              <h4 className="text-2xl font-bold text-gray-900 mb-2">100K+ Views</h4>
+              <p className="text-gray-600">Helping patients understand their treatment options</p>
+            </div>
+            
+            <div>
+              <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{backgroundColor: '#9B8B7A'}}>
+                <span className="text-white text-2xl">⭐</span>
+              </div>
+              <h4 className="text-2xl font-bold text-gray-900 mb-2">Expert Content</h4>
+              <p className="text-gray-600">Created by Dr. Ajay Krishna Murthy</p>
+            </div>
+          </div>
+          
+          {/* <div className="text-center mt-8">
+            <p className="text-lg text-gray-600 mb-6">
+              Subscribe to stay updated with the latest educational content and surgical insights
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-md">
-                Subscribe on YouTube
+              <button className="text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg" style={{backgroundColor: '#B68C58'}}>
+                Subscribe to Channel
               </button>
-              <button className="border-2 border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white font-medium py-3 px-8 rounded-lg transition-all duration-300">
+              <button className="border-2 font-medium py-3 px-8 rounded-lg transition-all duration-300" style={{borderColor: '#B68C58', color: '#B68C58'}} onMouseOver={(e) => {e.currentTarget.style.backgroundColor = '#B68C58'; e.currentTarget.style.color = 'white'}} onMouseOut={(e) => {e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#B68C58'}}>
                 View All Videos
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

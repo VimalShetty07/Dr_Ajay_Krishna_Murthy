@@ -225,7 +225,7 @@ export default function BookSection() {
                   <div>
                     <h4 className="font-semibold text-gray-900">Email</h4>
                     <p className="text-gray-600">info@drajaykrishnamurthy.com</p>
-                    <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
+                    <p className="text-sm text-gray-500">We&apos;ll respond within 24 hours</p>
                   </div>
                 </div>
 

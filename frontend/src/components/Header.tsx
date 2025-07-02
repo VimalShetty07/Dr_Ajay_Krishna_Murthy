@@ -20,10 +20,10 @@ export default function Header() {
               </div>
             </div>
             <div>
-              <h1 className="text-xl font-semibold text-gray-900">
+              <h1 className="text-2xl font-semibold text-gray-900">
                 Dr. Ajay Krishna Murthy
               </h1>
-              <p className="text-sm" style={{color: '#8A7D71'}}>Oculoplasty Surgeon</p>
+              <p className="text-base" style={{color: '#8A7D71'}}>Oculoplasty Surgeon</p>
             </div>
           </div>
 

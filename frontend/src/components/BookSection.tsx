@@ -224,7 +224,7 @@ export default function BookSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Email</h4>
-                    <p className="text-gray-600">info@drajaykrishnamurthy.com</p>
+                    <p className="text-gray-600">drajaykmurthy@gmail.com</p>
                     <p className="text-sm text-gray-500">We&apos;ll respond within 24 hours</p>
                   </div>
                 </div>
@@ -235,8 +235,18 @@ export default function BookSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Clinic Address</h4>
-                    <p className="text-gray-600">123 Medical Center,<br />Bangalore, Karnataka 560001</p>
-                    <p className="text-sm text-gray-500">Free parking available</p>
+                    <p className="text-gray-600">ChanRe Veena Rheumatology and Immunology Center,<br />
+                    Ground Floor, 531/B, 19th Main Rd, Sector 3,<br />
+                    HSR Layout, Bengaluru, Karnataka 560102</p>
+                    <a href="https://maps.app.goo.gl/Q2bA3j8gobp77qVC7" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       className="text-sm text-amber-600 hover:text-amber-700 transition-colors inline-flex items-center gap-1 mt-1">
+                      View on Google Maps
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
                   </div>
                 </div>
               </div>

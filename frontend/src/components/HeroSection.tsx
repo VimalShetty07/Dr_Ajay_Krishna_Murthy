@@ -101,14 +101,14 @@ export default function HeroSection() {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-6">
+              {/* <div className="flex flex-col sm:flex-row gap-4 pt-6">
                 <button className="bg-amber-600 hover:bg-amber-700 text-white font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                   Book Consultation
                 </button>
                 <button className="bg-white hover:bg-gray-50 text-amber-700 font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-amber-200">
                   View Specializations
                 </button>
-              </div>
+              </div> */}
 
               {/* Quick Stats */}
               <div className="grid grid-cols-2 gap-4 pt-8">
@@ -208,7 +208,7 @@ export default function HeroSection() {
         </div>
 
         {/* Bottom Stats Bar */}
-        <div className="mt-20 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-100 p-8">
+        {/* <div className="mt-20 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-100 p-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
@@ -220,7 +220,7 @@ export default function HeroSection() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -22,7 +22,7 @@ export default function SpecializationsSection() {
       title: 'Lid Surgery (Blepharoplasty)',
       description: 'Surgical correction of droopy eyelids and excess skin',
       icon: '⚕️',
-      color: 'from-emerald-500 to-emerald-600'
+      color: 'from-blue-500 to-blue-600'
     },
     {
       title: 'Fundamental Oculoplastic Procedures',
@@ -41,25 +41,27 @@ export default function SpecializationsSection() {
   return (
     <section className="relative py-16">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-emerald-50"></div>
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-emerald-100/30 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-blue-50"></div>
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-100/30 to-transparent"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-white rounded-full px-6 py-3 shadow-lg mb-6">
-            <span className="text-3xl mr-3">🔬</span>
-            <span className="text-emerald-600 font-semibold">Specializations</span>
+          <div className="inline-flex items-center bg-white rounded-lg px-6 py-3 shadow-md mb-6">
+            <div className="w-8 h-8 bg-blue-700 rounded-lg flex items-center justify-center mr-3">
+              <span className="text-white text-sm font-bold">SP</span>
+            </div>
+            <span className="text-blue-700 font-medium">Specializations</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Areas of
-            <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent"> Expertise</span>
+            <span className="bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent"> Expertise</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Dr. Ajay Krishna Murthy offers comprehensive oculoplastic surgery services 
             with precision, innovation, and personalized care.
           </p>
-          <div className="mt-6 w-24 h-1 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full mx-auto"></div>
+          <div className="mt-6 w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-500 rounded-full mx-auto"></div>
         </div>
 
         {/* Specializations Grid */}
@@ -87,7 +89,7 @@ export default function SpecializationsSection() {
                 </p>
                 
                 {/* Learn More Link */}
-                <div className="flex items-center text-sm font-semibold text-emerald-600 group-hover:text-emerald-700 transition-colors">
+                <div className="flex items-center text-sm font-semibold text-blue-600 group-hover:text-blue-700 transition-colors">
                   <span>Learn More</span>
                   <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -107,8 +109,8 @@ export default function SpecializationsSection() {
             <p className="text-lg text-gray-600 mb-4">
               Need a specialized consultation for your eye condition?
             </p>
-            <button className="bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white font-semibold py-3 px-8 rounded-2xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-              💬 Discuss Your Case
+            <button className="bg-blue-700 hover:bg-blue-800 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-md">
+              Discuss Your Case
             </button>
           </div>
         </div>

@@ -34,7 +34,7 @@ export default function Footer() {
               <a href="mailto:drajaykmurthy@gmail.com" className="bg-purple-600 hover:bg-purple-700 p-3 rounded-lg transition-colors">
                 <span className="text-xl">✉️</span>
               </a>
-              <a href="https://wa.me/919611517424" className="bg-green-600 hover:bg-green-700 p-3 rounded-lg transition-colors">
+                              <a href="https://wa.me/919611517424" className="bg-blue-600 hover:bg-blue-700 p-3 rounded-lg transition-colors">
                 <span className="text-xl">💬</span>
               </a>
             </div>

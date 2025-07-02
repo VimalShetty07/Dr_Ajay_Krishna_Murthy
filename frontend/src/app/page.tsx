@@ -1,7 +1,6 @@
 import {
   Header,
   Footer,
-  Navigation,
   HeroSection,
   EducationSection,
   SpecializationsSection,
@@ -14,10 +13,9 @@ import {
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
-      <Navigation />
       <Header />
       
-      <main className="pt-16">
+      <main>
         <section id="about">
           <HeroSection />
         </section>

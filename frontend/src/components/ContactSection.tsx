@@ -63,17 +63,17 @@ export default function ContactSection() {
                 </div>
 
                 {/* WhatsApp Contact */}
-                <div className="bg-gradient-to-br from-green-500/20 to-green-600/20 backdrop-blur-lg rounded-2xl p-8 border border-green-400/30 hover:border-green-300/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 backdrop-blur-lg rounded-2xl p-8 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl flex items-center justify-center mr-4">
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4">
                       <span className="text-2xl text-white">💬</span>
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white">WhatsApp</h3>
-                      <p className="text-green-200">Quick messages</p>
+                      <p className="text-blue-200">Quick messages</p>
                     </div>
                   </div>
-                  <a href="https://wa.me/919611517424" className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl transition-colors">
+                  <a href="https://wa.me/919611517424" className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-colors">
                     <span className="mr-2">📱</span>
                     Message on WhatsApp
                   </a>
@@ -118,8 +118,8 @@ export default function ContactSection() {
                   </div>
                   
                   <div>
-                    <h4 className="text-lg font-semibold text-green-300 mb-2">💡 Specializations</h4>
-                    <ul className="text-sm text-green-100 space-y-1">
+                    <h4 className="text-lg font-semibold text-blue-300 mb-2">💡 Specializations</h4>
+                    <ul className="text-sm text-blue-100 space-y-1">
                       <li>• Eyelid Surgery</li>
                       <li>• Orbital Surgery</li>
                       <li>• Aesthetic Procedures</li>

@@ -158,7 +158,7 @@ export default function HeroSection() {
               </div>
 
               {/* Professional Credentials */}
-              <div className="grid md:grid-cols-3 gap-4">
+              {/* <div className="grid md:grid-cols-3 gap-4">
                 <div className="bg-white/70 backdrop-blur-sm p-6 rounded-lg border border-amber-200/60 hover:bg-white/90 hover:shadow-lg transition-all duration-300">
                   <div className="text-center">
                     <div className="w-12 h-12 bg-amber-600 rounded-lg flex items-center justify-center mx-auto mb-3">
@@ -188,7 +188,7 @@ export default function HeroSection() {
                     <p className="text-sm text-gray-600">Oculoplasty Expert</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* CTA Button */}
               <div className="pt-4">

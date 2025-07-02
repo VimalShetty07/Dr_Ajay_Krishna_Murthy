@@ -9,23 +9,23 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-gradient-to-r from-amber-50 via-white to-orange-50 border-b border-amber-200 shadow-sm">
+    <header className="sticky top-0 z-50 bg-gradient-to-r from-amber-50 via-white to-orange-50 border-b border-amber-200 shadow-sm backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Left side - Logo and Name */}
           <div className="flex items-center space-x-3">
-            <div className="flex-shrink-0">
+            {/* <div className="flex-shrink-0">
               <img 
                 src="/images/logo.jpeg" 
                 alt="Oculoplasty Logo" 
                 className="h-10 w-10 object-cover rounded-lg"
               />
-            </div>
+            </div> */}
             <div>
-              <h1 className="text-xl font-semibold text-gray-900">
+              <h1 className="text-3xl font-bold text-gray-900">
                 Dr. Ajay Krishna Murthy
               </h1>
-              <p className="text-sm text-amber-700">Oculoplasty Surgeon</p>
+              {/* <p className="text-sm text-amber-700">Oculoplasty Surgeon</p> */}
             </div>
           </div>
 
@@ -38,6 +38,12 @@ export default function Header() {
                 className="text-gray-600 hover:text-amber-700 text-sm font-medium transition-colors"
               >
                 About
+              </button>
+              <button 
+                onClick={() => scrollToSection('#education')}
+                className="text-gray-600 hover:text-amber-700 text-sm font-medium transition-colors"
+              >
+                Education
               </button>
               <button 
                 onClick={() => scrollToSection('#specializations')}

@@ -123,21 +123,6 @@ export default function ServicesSection() {
         </div>
         
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-white rounded-3xl p-8 shadow-lg inline-block">
-            <p className="text-lg text-gray-600 mb-4">
-              Need help choosing the right service for your needs?
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-amber-700 hover:bg-amber-800 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-md">
-                Get Free Consultation
-              </button>
-              <button className="border-2 border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white font-medium py-3 px-8 rounded-lg transition-all duration-300">
-                Call: +91 96115 17424
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

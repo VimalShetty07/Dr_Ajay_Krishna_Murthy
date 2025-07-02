@@ -2,6 +2,7 @@ import {
   Header,
   Footer,
   HeroSection,
+  EducationSection,
   SpecializationsSection,
   ServicesSection,
   BookSection,
@@ -16,6 +17,10 @@ export default function Home() {
       <main>
         <section id="about">
           <HeroSection />
+        </section>
+        
+        <section id="education">
+          <EducationSection />
         </section>
         
         <section id="specializations">

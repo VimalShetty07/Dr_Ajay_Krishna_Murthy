@@ -9,18 +9,8 @@ export default function BookSection() {
     phone: '',
     date: '',
     time: '',
-    service: '',
     message: ''
   });
-
-  const services = [
-    'Comprehensive Eye Examination',
-    'Eyelid Surgery Consultation',
-    'Orbital Disorder Treatment',
-    'Cosmetic Enhancement',
-    'Emergency Eye Care',
-    'Follow-up Consultation'
-  ];
 
   const timeSlots = [
     '09:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',
@@ -35,15 +25,52 @@ export default function BookSection() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Appointment booking:', formData);
-    alert('Appointment request submitted! We will contact you shortly to confirm.');
+
+    // Assemble payload expected by backend
+    const payload = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      date: formData.date,
+      time: formData.time,
+      message: formData.message
+    };
+
+    try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL || 'http://127.0.0.1:8000'}/api/appointments/`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to create appointment');
+      }
+
+      alert('Appointment created successfully! Reference ID: ' + data.appointment_id);
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        date: '',
+        time: '',
+        message: ''
+      });
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message : 'Something went wrong. Please try again.';
+      alert(message);
+    }
   };
 
   return (
-    <section className="relative py-16">
+    <section className="relative py-16" id="book">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-amber-50 to-white"></div>
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-amber-100/30 to-transparent"></div>
@@ -51,12 +78,6 @@ export default function BookSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          {/* <div className="inline-flex items-center bg-white rounded-lg px-6 py-3 shadow-md mb-6">
-            <div className="w-8 h-8 bg-amber-700 rounded-lg flex items-center justify-center mr-3">
-              <span className="text-white text-sm font-bold">AP</span>
-            </div>
-            <span className="text-amber-700 font-medium">Book Appointment</span>
-          </div> */}
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Schedule Your
             <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent"> Consultation</span>
@@ -108,36 +129,18 @@ export default function BookSection() {
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email Address
+                  Email Address *
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
+                  required
                   value={formData.email}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
                   placeholder="your.email@example.com"
                 />
-              </div>
-
-              <div>
-                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                  Select Service *
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  required
-                  value={formData.service}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
-                >
-                  <option value="">Choose a service</option>
-                  {services.map((service, index) => (
-                    <option key={index} value={service}>{service}</option>
-                  ))}
-                </select>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
@@ -179,7 +182,7 @@ export default function BookSection() {
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Additional Message
+                  Additional Message / Concerns
                 </label>
                 <textarea
                   id="message"
@@ -188,7 +191,7 @@ export default function BookSection() {
                   value={formData.message}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
-                  placeholder="Any specific concerns or questions..."
+                  placeholder="Any specific concerns, symptoms, or questions..."
                 ></textarea>
               </div>
 
@@ -249,14 +252,36 @@ export default function BookSection() {
                     </a>
                   </div>
                 </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-amber-600">💬</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">WhatsApp</h4>
+                    <a 
+                      href="https://wa.me/919611517424" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm mt-2"
+                    >
+                      <span className="mr-2">📱</span>
+                      Message on WhatsApp
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* <div className="bg-gradient-to-r from-amber-600 to-amber-700 rounded-3xl p-8 text-white">
-              <h3 className="text-xl font-bold mb-4">Emergency Contact</h3>
-              <p className="mb-4">For urgent eye emergencies, call our 24/7 helpline:</p>
-              <div className="text-2xl font-bold">+91 98765 43210</div>
-            </div> */}
+            <div className="bg-gradient-to-r from-amber-600 to-amber-700 rounded-3xl p-8 text-white">
+              <h3 className="text-xl font-bold mb-4">Specializations</h3>
+              <ul className="space-y-2 text-amber-100">
+                <li>• Eyelid Surgery (Blepharoplasty)</li>
+                <li>• Orbital Surgery</li>
+                <li>• Aesthetic Eye Procedures</li>
+                <li>• Comprehensive Eye Care</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

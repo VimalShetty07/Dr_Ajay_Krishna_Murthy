@@ -30,7 +30,7 @@ export default function HeroSection() {
   // Professional stats
   const stats = [
     { number: '15+', label: 'Years of Experience', icon: '📅' },
-    { number: '10,000+', label: 'Successful Procedures', icon: '✓' },
+    { number: '5,000+', label: 'Successful Procedures', icon: '✓' },
     { number: '98%', label: 'Patient Satisfaction', icon: '⭐' },
     { number: '50+', label: 'Research Publications', icon: '📚' }
   ];
@@ -83,7 +83,7 @@ export default function HeroSection() {
                 </h1>
                 <div className="flex items-center gap-4">
                   <div className="w-20 h-1.5 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full"></div>
-                  <p className="text-xl text-gray-600 font-medium">MS, FRCS, FICO</p>
+                  <p className="text-xl text-gray-600 font-medium">MS, FLVPEI, FICO</p>
                 </div>
               </div>
 
